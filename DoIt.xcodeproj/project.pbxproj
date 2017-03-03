@@ -15,6 +15,7 @@
 		4540FA771E695D5900302187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4540FA751E695D5900302187 /* LaunchScreen.storyboard */; };
 		4540FA7F1E69605000302187 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540FA7E1E69605000302187 /* Task.swift */; };
 		4540FA811E696BBA00302187 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4540FA801E696BBA00302187 /* CreateTaskViewController.swift */; };
+		45FA487C1E699E08005A20B5 /* CompleteTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FA487B1E699E08005A20B5 /* CompleteTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4540FA781E695D5900302187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4540FA7E1E69605000302187 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		4540FA801E696BBA00302187 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		45FA487B1E699E08005A20B5 /* CompleteTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				4540FA691E695D5900302187 /* AppDelegate.swift */,
 				4540FA6B1E695D5900302187 /* TasksViewController.swift */,
+				45FA487B1E699E08005A20B5 /* CompleteTaskViewController.swift */,
 				4540FA801E696BBA00302187 /* CreateTaskViewController.swift */,
 				4540FA7E1E69605000302187 /* Task.swift */,
 				4540FA6D1E695D5900302187 /* Main.storyboard */,
@@ -147,6 +150,7 @@
 			files = (
 				4540FA7F1E69605000302187 /* Task.swift in Sources */,
 				4540FA721E695D5900302187 /* DoIt.xcdatamodeld in Sources */,
+				45FA487C1E699E08005A20B5 /* CompleteTaskViewController.swift in Sources */,
 				4540FA6C1E695D5900302187 /* TasksViewController.swift in Sources */,
 				4540FA6A1E695D5900302187 /* AppDelegate.swift in Sources */,
 				4540FA811E696BBA00302187 /* CreateTaskViewController.swift in Sources */,
@@ -313,6 +317,7 @@
 				4540FA7D1E695D5900302187 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

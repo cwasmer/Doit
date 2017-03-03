@@ -13,7 +13,8 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     
     var tasks : [Task] = []
-
+    var selectedindex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -42,6 +43,12 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedindex = indexPath.row
+        let task = tasks[indexPath.row]
+        performSegue(withIdentifier: "selectTaskSegue", sender: task)
+    }
+    
     func makeTasks() -> [Task] {
         
         let task1 = Task()
@@ -58,16 +65,26 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         return [task1, task2, task3]
     }
-
+    
     @IBAction func plusTapped(_ sender: Any) {
         performSegue(withIdentifier: "addSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextVC = segue.destination as! CreateTaskViewController
-        nextVC.previousVC = self
-    }
+        if segue.identifier == "addSegue" {
+            let nextVC = segue.destination as! CreateTaskViewController
+            nextVC.previousVC = self
+        }
+        
+        if segue.identifier == "selectTaskSegue" {
+            let nextVC = segue.destination as! CompleteTaskViewController
+            nextVC.task = sender as! Task
+            nextVC.previousVC = self
 
+        }
+        
+    }
+    
 }
 
 
